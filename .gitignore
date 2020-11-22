@@ -7,3 +7,4 @@ coverage
 tmp
 .idea
 .vscode
+public/css
