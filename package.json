@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "node ace build --production",
-    "start": "node server.js",
+    "start": "node build/server.js",
     "dev": "node ace serve --watch",
     "sass-watch": "npx sass resources/scss/app.scss public/css/app.css --watch",
     "sass-build": "npx sass resources/scss/app.scss public/css/app.css --style=compressed --no-source-map",
@@ -35,5 +35,8 @@
     "source-map-support": "^0.5.19",
     "sqlite3": "^5.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": "15.x"
+  }
 }
