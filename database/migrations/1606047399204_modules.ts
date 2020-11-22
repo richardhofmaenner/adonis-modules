@@ -10,6 +10,7 @@ export default class Modules extends BaseSchema {
       table.string('logoUrl', 255)
       table.text('description')
       table.string('packageUrl', 255)
+      table.enum('version', ['v4', 'v5'])
       table.timestamps(true)
     })
   }

@@ -17,6 +17,9 @@ export default class Module extends BaseModel {
   @column()
   public packageUrl: string
 
+  @column()
+  public version: string
+
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
 
