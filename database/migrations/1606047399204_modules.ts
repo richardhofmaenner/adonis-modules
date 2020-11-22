@@ -7,9 +7,9 @@ export default class Modules extends BaseSchema {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
       table.string('name', 100)
-      table.string('logoUrl', 255)
+      table.string('logo_url', 255)
       table.text('description')
-      table.string('packageUrl', 255)
+      table.string('package_url', 255)
       table.enum('version', ['v4', 'v5'])
       table.timestamps(true)
     })
