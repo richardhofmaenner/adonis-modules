@@ -6,14 +6,18 @@
     "build": "node ace build --production",
     "start": "node server.js",
     "dev": "node ace serve --watch",
+    "sass-watch": "npx sass resources/scss/app.scss public/css/app.css --watch",
+    "sass-build": "npx sass resources/scss/app.scss public/css/app.css --style=compressed --no-source-map",
     "lint": "eslint . --ext=.ts"
   },
   "devDependencies": {
     "@adonisjs/assembler": "^3.0.0",
     "adonis-preset-ts": "^1.1.0",
+    "bootstrap": "^4.5.3",
     "eslint": "^7.13.0",
     "eslint-plugin-adonis": "^1.0.15",
     "pino-pretty": "^4.3.0",
+    "sass": "^1.29.0",
     "typescript": "^4.0.5",
     "youch": "^2.1.1",
     "youch-terminal": "^1.0.1"
