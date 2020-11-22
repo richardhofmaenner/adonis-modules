@@ -9,9 +9,24 @@
   <title>{{ title }}</title>
 </head>
 <body>
-  <main>
-    @section('content')
-    @endsection
-  </main>
+<header>
+  @section('header')
+  @endsection
+</header>
+<main>
+  @section('content')
+  @endsection
+</main>
+<footer class="bg-dark py-4 text-center text-white">
+  <section class="container">
+    <div class="row">
+      <div class="col-12">
+        <p class="mb-0">
+            Built with 💙 by Richard Hofmänner
+        </p>
+      </div>
+    </div>
+  </section>
+</footer
 </body>
 </html>

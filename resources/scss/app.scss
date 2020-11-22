@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+@import "variables";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "main";
-@import "variables";
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .vh#{$infix}-80 {height: 80vh}
+    .vh#{$infix}-50 {height: 50vh}
+  }
+}
