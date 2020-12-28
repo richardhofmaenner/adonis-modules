@@ -8,6 +8,7 @@
 import Env from '@ioc:Adonis/Core/Env'
 import { SessionConfig } from '@ioc:Adonis/Addons/Session'
 
+// @ts-ignore
 const sessionConfig: SessionConfig = {
   /*
   |--------------------------------------------------------------------------

@@ -23,9 +23,9 @@ export default Env.rules({
   CACHE_VIEWS: Env.schema.boolean(),
   SESSION_DRIVER: Env.schema.string(),
   NODE_ENV: Env.schema.enum(['development', 'production', 'testing'] as const),
-  MYSQL_HOST: Env.schema.string({ format: 'host' }),
-  MYSQL_PORT: Env.schema.number(),
-  MYSQL_USER: Env.schema.string(),
+  MYSQL_HOST: Env.schema.string.optional(),
+  MYSQL_PORT: Env.schema.number.optional(),
+  MYSQL_USER: Env.schema.string.optional(),
   MYSQL_PASSWORD: Env.schema.string.optional(),
-  MYSQL_DB_NAME: Env.schema.string(),
+  MYSQL_DB_NAME: Env.schema.string.optional(),
 })
