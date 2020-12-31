@@ -8,21 +8,25 @@
   <link rel="stylesheet" href="/css/app.css" />
   <title>{{ title }}</title>
 </head>
-<body>
+<body class="min-vh-100 bg-light">
 <header>
-  @section('header')
-  @endsection
+  <div class="container-fluid d-flex vh-80 vh-md-50 align-items-center bg-white">
+    <div class="container text-center">
+      @section('header')
+      @endsection
+    </div>
+  </div>
 </header>
-<main>
+<main class="pt-5">
   @section('content')
   @endsection
 </main>
-<footer class="bg-dark py-4 text-center text-white">
+<footer class="bg-dark py-4 text-center text-white w-100">
   <section class="container">
     <div class="row">
       <div class="col-12">
         <p class="mb-0">
-            Built with 💙 by Richard Hofmänner
+            Built with 💙 by Terillos
         </p>
       </div>
     </div>

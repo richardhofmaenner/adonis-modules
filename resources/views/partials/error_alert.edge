@@ -1,0 +1,18 @@
+@if(flashMessages.has('errors') || flashMessages.has('auth.errors.uid'))
+  <div class="row mb-5">
+    <div class="col-12 col-lg-6 offset-lg-3">
+      <div class="alert alert-danger">
+        <ul class="mb-0">
+          @each(error in flashMessages.get('errors'))
+          <li>{{ error }}</li>
+          @endeach
+          @each(error in flashMessages.get('auth.errors'))
+          @if(error != null)
+            <li>{{ error }}</li>
+          @endif
+          @endeach
+        </ul>
+      </div>
+    </div>
+  </div>
+@endif

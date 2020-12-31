@@ -19,6 +19,19 @@
 */
 
 import Route from '@ioc:Adonis/Core/Route'
+import {HttpContextContract} from "@ioc:Adonis/Core/HttpContext";
+
+Route.group(() => {
+  Route.group(() => {
+    Route.get('login', 'admin/AuthController.showLoginForm')
+    Route.post('login', 'admin/AuthController.login')
+  }).middleware('isGuest')
+
+  Route.group(() => {
+    Route.get('logout', 'admin/AuthController.logout')
+  }).middleware('isUser')
+}).prefix('admin')
 
 Route.post('/add', 'ListModulesController.addModule')
+
 Route.get('/', 'ListModulesController.get')
