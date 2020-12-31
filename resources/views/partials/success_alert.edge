@@ -1,0 +1,9 @@
+@if(flashMessages.has('success'))
+  <div class="row mb-5">
+    <div class="col-12 col-lg-6 offset-lg-3">
+      <div class="alert alert-success">
+        <p class="mb-0">{{ flashMessages.get('success') }}</p>
+      </div>
+    </div>
+  </div>
+@endif

@@ -22,6 +22,7 @@ import Server from '@ioc:Adonis/Core/Server'
 */
 Server.middleware.register([
   'Adonis/Core/BodyParserMiddleware',
+  'App/Middleware/LoadUserContext'
 ])
 
 /*
@@ -41,4 +42,6 @@ Server.middleware.register([
 |
 */
 Server.middleware.registerNamed({
+  isUser: 'App/Middleware/IsUser',
+  isGuest: 'App/Middleware/IsGuest'
 })
