@@ -28,6 +28,7 @@ Route.group(() => {
 
   Route.group(() => {
     Route.get('logout', 'admin/AuthController.logout')
+    Route.get('/', 'admin/HomeController.show')
   }).middleware('isUser')
 }).prefix('admin')
 
