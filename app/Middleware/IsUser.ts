@@ -3,7 +3,7 @@ import Logger from "@ioc:Adonis/Core/Logger";
 
 export default class IsUser {
   public async handle (ctx: HttpContextContract, next: () => Promise<void>) {
-    if (ctx.auth === null) {
+    if (!ctx.auth.isLoggedIn) {
       return ctx.response.redirect('/admin/login')
     }
 
